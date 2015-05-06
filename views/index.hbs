@@ -1,0 +1,112 @@
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        {{> slides}}
+    </div>
+
+</div>
+
+
+<script>
+    var myUpvotes = [];
+    var sendQuestion = function(e) {
+        e.preventDefault();
+        $question = $('#questionfield');
+        socket.emit('question', $question.val());
+        $question.val('');
+    }
+
+    var formatQuestion = function(question, id) {
+        return '<li>' + question.question + ' <a href="#" class="upvote" data-questionid="'+id+'">upvote</a> ('+question.upvotes+')</li>';
+    }
+
+    var showQuestions = function(questions) {
+        var questionList = '';
+
+        for (var i = 0; i<questions.length; i++) {
+            questionList += formatQuestion(questions[i], i);
+        }
+
+        $('#question_list ul').html(questionList);
+    }
+
+    // {{#if presenter }}
+    console.log('Presenter mode activated');
+    // {{/if}}
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        // {{#if presenter }}
+        controls: true,
+        progress: true,
+        history: true,
+        // {{else}}
+        controls: false,
+        progress: false,
+        history: false,
+        keyboard: false,
+        touch: false,
+        // {{/if}}
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+
+    var socket = io();
+
+    socket.on('connections', function (data) {
+        $('#connection_count span').text(data);
+    });
+
+    // {{#if presenter }}
+    Reveal.addEventListener( 'slidechanged', function(e) {
+        socket.emit('goto', {indexh: e.indexh, indexv: e.indexv});
+    } );
+    // {{else}}
+
+    socket.on('goto', function (data) {
+        var indexh = 0, indexv = 0;
+        if(data && data.indexh) indexh = data.indexh;
+        if(data && data.indexv) indexv = data.indexv;
+
+        Reveal.slide(indexh, indexv);
+    });
+
+    // {{/if}}
+
+    socket.on('questions', function(questions) {
+        $('#quetion_count').text(questions.length);
+        showQuestions(questions);
+    });
+
+    $('#askbutton').on('click', sendQuestion);
+    $('#question_list').on('click', 'a.upvote', function(e) {
+        var questionid = $(this).attr('data-questionid');
+        e.preventDefault();
+
+        if (myUpvotes.indexOf(questionid) == -1) {
+            myUpvotes.push(questionid);
+            socket.emit('upvote', questionid);
+        } else {
+            console.log('Vote only once per question');
+        }
+    });
+    $('#question_box').on('click', 'a.showhide', function(e) {
+        e.preventDefault();
+        $form = $('.questionform');
+        if($form.is(':visible')) {
+            $form.hide('fast');
+        } else {
+            $form.show('fast');
+        }
+    })
+</script>
