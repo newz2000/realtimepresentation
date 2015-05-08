@@ -1,324 +1,314 @@
 <section>
-    <h1>Reveal.js</h1>
-    <h3>The HTML Presentation Framework</h3>
+    <h1>Beyond REST</h1>
+    <h3>Real time apps with Node.js and WebSockets</h3>
     <p>
-        <small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+        <small>Matthew Nuzum <a href="https://twitter.com/newz2000">@newz2000</a></small>
     </p>
 </section>
 
 <section>
-    <h2>Hello There</h2>
-    <p>
-        reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-    </p>
-</section>
-
-<!-- Example of nested vertical slides -->
-<section>
-    <section>
-        <h2>Vertical Slides</h2>
-        <p>Slides can be nested inside of each other.</p>
-        <p>Use the <em>Space</em> key to navigate through all slides.</p>
-        <br>
-        <a href="#" class="navigate-down">
-            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-        </a>
-    </section>
-    <section>
-        <h2>Basement Level 1</h2>
-        <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-    </section>
-    <section>
-        <h2>Basement Level 2</h2>
-        <p>That's it, time to go back up.</p>
-        <br>
-        <a href="#/2">
-            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-        </a>
-    </section>
+    <h2>See websockets now</h2>
+    <p>You can follow along and even participate by viewing this site on your computer, tablet or mobile device at</p>
+        <h3><a href="https://tekrs.com/real-time">https://tekrs.com/real-time</a></h3>
 </section>
 
 <section>
-    <h2>Slides</h2>
-    <p>
-        Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-    </p>
+    <h1>What is “Real Time”?</h1>
+</section>
+
+<section data-background="/images/ubuntu.png">
+    <pre><code>REAL TIME: The Old Way.</code></pre>
+    <pre><code>THIS is the problem we want to solve.</code></pre>
+</section>
+
+<section data-background="/images/cobalt.png">
+    <pre><code>Who remembers this?</code></pre>
 </section>
 
 <section>
-    <h2>Point of View</h2>
-    <p>
-        Press <strong>ESC</strong> to enter the slide overview.
-    </p>
-    <p>
-        Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-    </p>
+    <h2>A new way</h2><h3>(starting with IE5)</h3>
+    <p><img src="/images/ms-ajax.png" width="448"></p>
 </section>
 
 <section>
-    <h2>Touch Optimized</h2>
-    <p>
-        Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-    </p>
-</section>
-
-<section data-markdown>
-    <script type="text/template">
-        ## Markdown support
-
-        Write content using inline or external Markdown.
-        Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-        ```
-        <section data-markdown>
-            ## Markdown support
-
-            Write content using inline or external Markdown.
-            Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-        </section>
-        ```
-    </script>
-</section>
-
-<section>
-    <section id="fragments">
-        <h2>Fragments</h2>
-        <p>Hit the next arrow...</p>
-        <p class="fragment">... to step through ...</p>
-        <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-        <aside class="notes">
-            This slide has fragments which are also stepped through in the notes window.
-        </aside>
-    </section>
-    <section>
-        <h2>Fragment Styles</h2>
-        <p>There's different types of fragments, like:</p>
-        <p class="fragment grow">grow</p>
-        <p class="fragment shrink">shrink</p>
-        <p class="fragment roll-in">roll-in</p>
-        <p class="fragment fade-out">fade-out</p>
-        <p class="fragment current-visible">current-visible</p>
-        <p class="fragment highlight-red">highlight-red</p>
-        <p class="fragment highlight-blue">highlight-blue</p>
-    </section>
-</section>
-
-<section id="transitions">
-    <h2>Transition Styles</h2>
-    <p>
-        You can select from different transitions, like: <br>
-        <a href="?transition=none#/transitions">None</a> -
-        <a href="?transition=fade#/transitions">Fade</a> -
-        <a href="?transition=slide#/transitions">Slide</a> -
-        <a href="?transition=convex#/transitions">Convex</a> -
-        <a href="?transition=concave#/transitions">Concave</a> -
-        <a href="?transition=zoom#/transitions">Zoom</a>
-    </p>
-</section>
-
-<section id="themes">
-    <h2>Themes</h2>
-    <p>
-        reveal.js comes with a few themes built in: <br>
-        <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-    </p>
-</section>
-
-<section>
-    <section data-background="#dddddd">
-        <h2>Slide Backgrounds</h2>
-        <p>
-            Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-        </p>
-        <a href="#" class="navigate-down">
-            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-        </a>
-    </section>
-    <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-        <h2>Image Backgrounds</h2>
-        <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-    </section>
-    <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-        <h2>Tiled Backgrounds</h2>
-        <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-    </section>
-    <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-            <h2>Video Backgrounds</h2>
-            <pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-        </div>
-    </section>
-</section>
-
-<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-    <h2>Background Transitions</h2>
-    <p>
-        Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-    </p>
-    <pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-</section>
-
-<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-    <h2>Background Transitions</h2>
-    <p>
-        You can override background transitions per-slide.
-    </p>
-    <pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-</section>
-
-<section>
-    <h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-    if( supports3DTransforms ) {
-
-        var nodes = document.querySelectorAll( selector );
-
-        for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-            var node = nodes[i];
-
-            if( !node.className ) {
-                node.className += ' roll';
-            }
-        }
-    }
-}</code></pre>
-    <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-</section>
-
-<section>
-    <h2>Marvelous List</h2>
+    <h2>Then came:</h2>
     <ul>
-        <li>No order here</li>
-        <li>Or here</li>
-        <li>Or here</li>
-        <li>Or here</li>
+        <li>Commetd</li>
+        <li>Long polling</li>
+        <li>Frame hacks</li>
+        <li>Flash trickery</li>
+    </ul>
+    <h3>These simply paved the way for</h3>
+</section>
+
+<section>
+    <h1>Websockets</h1>
+    <p>Welcome to the real time web.</p>
+</section>
+
+<section>
+    <h2>Implementations:</h2>
+    <ul>
+        <li><strong>Servers</strong></li>
+        <li>.Net (SignalR)</li>
+        <li>Java (Java EE7)</li>
+        <li>Python (Autobahn)</li>
+        <li>Node.js</li>
+        <li><strong>Clients</strong></li>
+        <li>Android (Autobahn)</li>
+        <li>iOS (SocketRocket)</li>
+        <li>Javascript</li>
     </ul>
 </section>
 
 <section>
-    <h2>Fantastic Ordered List</h2>
+    <h2>Can I use it?</h2>
+    <p><img src="/images/caniuse.png" alt=""/></p>
+</section>
+
+<section>
+    <h1>Yes, with Socket.io</h1>
+    <p>A real-time engine that uses websockets when possible.</p>
+</section>
+
+<section>
+    <h2>Compatibility</h2>
+    <p><img src="/images/socket-io-compatibility.png"></p>
+</section>
+
+<section>
+    <h1>What can we do with it?</h1>
+    <p><strong>Our goal:</strong> eliminate polling</p>
+</section>
+
+<section>
+    <h2>Chat</h2>
+    <p>Everyone's first app</p>
+</section>
+
+<section>
+    <h2>Update product availability in real time</h2>
+    <p>Think of Woot - watch the available count drop.</p>
+</section>
+
+<section>
+    <h2>Stock or commodities pricing</h2>
+    <p>See changes in milliseconds</p>
+    <p>Note: Some prices don't change at all during a day. Some change by the second. Why update them all?</p>
+</section>
+
+<section>
+    <h1>Putting Socket.io to work</h1>
+    <p>Turns out, it's not hard</p>
+</section>
+
+<section>
+    <h2>Everything is an event</h2>
+    <p>Client side:</p>
+    <pre><code>
+var sendQuestion = function(e) {
+    $question = $('#questionfield');
+    socket.emit('question', $question.val());
+}
+
+socket.on('questions', function(questions) {
+    $('#quetion_count').text(questions.length);
+    showQuestions(questions);
+});
+    </code></pre>
+</section>
+
+<section>
+    <h2>Everything is an event</h2>
+    <p>Server side:</p>
+    <pre><code>
+    socket.on('question', function(data) {
+        addQuestion(data);
+        io.emit('questions', questions);
+    });
+    </code></pre>
+</section>
+
+<section>
+    <h1>It is very easy</h1>
+    <p>I built the app running this presentation in about 3 hours.</p>
+</section>
+
+<section>
+    <h2>How does Socket.io work?</h2>
     <ol>
-        <li>One is smaller than...</li>
-        <li>Two is smaller than...</li>
-        <li>Three!</li>
+        <li>Makes an HTTP request (via Ajax) to negotiate the best way to communicate</li>
+        <li>Establishes a connection</li>
+        <li>Begins two-way communication</li>
+        <li>Tries to reconnect if the connection breaks</li>
     </ol>
 </section>
 
 <section>
-    <h2>Tabular Tables</h2>
-    <table>
-        <thead>
-        <tr>
-            <th>Item</th>
-            <th>Value</th>
-            <th>Quantity</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Apples</td>
-            <td>$1</td>
-            <td>7</td>
-        <tr>
-        <tr>
-            <td>Lemonade</td>
-            <td>$2</td>
-            <td>18</td>
-        <tr>
-        <tr>
-            <td>Bread</td>
-            <td>$3</td>
-            <td>2</td>
-        <tr>
-        </tbody>
-    </table>
+    <h2>How does Socket.io work?</h2>
+    <ol>
+        <li>Server can broadcast to all connections</li>
+        <li>Server can message individual connections</li>
+        <li>Can make use of sessions on the server side</li>
+    </ol>
 </section>
 
 <section>
-    <h2>Clever Quotes</h2>
-    <p>
-        These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-        &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-    </p>
-    <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-        &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-    </blockquote>
+    <h2>Using Socket.io and Express.js</h2>
+    <pre><code>
+var express = require('express');
+var http = require('http');
+var socketio = require('socket.io');
+
+var app = express();
+var server = http.Server(app);
+var io = socketio(server);
+
+server.listen(5000);
+</code></pre>
 </section>
 
 <section>
-    <h2>Intergalactic Interconnections</h2>
-    <p>
-        You can link between slides internally,
-        <a href="#/2/3">like this</a>.
-    </p>
+    <h2>Using Socket.io and Express.js</h2>
+    <pre><code>
+var connection_count = 0;
+
+io.on('connection', function(socket) {
+    connection_count++;
+
+    io.emit('connections', connection_count);
+
+    socket.on('disconnect', function() {
+        connection_count--;
+        io.emit('connections', connection_count);
+    });
+});
+    </code></pre>
 </section>
 
 <section>
-    <h2>Speaker View</h2>
-    <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-    <p>Press the <em>S</em> key to try it out.</p>
-
-    <aside class="notes">
-        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-    </aside>
-</section>
-
-<section>
-    <h2>Global State</h2>
-    <p>
-        Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-        will be added as a class to the document element when the slide is open. This lets you
-        apply broader style changes, like switching the page background.
-    </p>
-</section>
-
-<section data-state="customevent">
-    <h2>State Events</h2>
-    <p>
-        Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-    </p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-    console.log( '"customevent" has fired' );
-} );
-                    </code></pre>
-</section>
-
-<section>
-    <h2>Take a Moment</h2>
-    <p>
-        Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-    </p>
-</section>
-
-<section>
-    <h2>Much more</h2>
+    <h2>REST. What is it good for?</h2>
     <ul>
-        <li>Right-to-left support</li>
-        <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-        <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-        <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-        <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+        <li>The best way to leverage HTTP</li>
+        <li>Stateless, therefore great for APIs</li>
+        <li>Simpler than SOAP, CORBA, .*COM</li>
+        <li>¿CRUD style web apps?</li>
     </ul>
 </section>
 
+<section>
+    <h2>Modern web apps</h2>
+    <ol>
+        <li>Server figures out who you are and what you're allowed to see or do</li>
+        <li>Fetch information and display it</li>
+        <li>Browser shows information in an edit form</li>
+        <li>Submit form back to the server</li>
+        <li>Server figures out who you are and what you're allowed to see or do</li>
+        <li>Consider response</li>
+        <li>Take action (i.e. redirect, show error)</li>
+    </ol>
+</section>
+
+<section>
+    <h1>When is statelessness a benefit?</h1>
+</section>
+
+<section>
+    <h1>Scaling Node.js and WebSockets</h1>
+</section>
+
+<section>
+    <h2>A real problem</h2>
+    <p>This isn't busy:</p>
+    <p><img src="/images/not-busy.png" alt=""/></p>
+</section>
+
+<section>
+    <h2>A real problem</h2>
+    <p>This is busy!</p>
+    <p><img src="/images/busy.png" alt=""/></p>
+</section>
+
+<section>
+    <h2>Node.js isn't multi-threaded*</h2>
+    <p>*Note exactly true</p>
+</section>
+
+<section>
+    <h2>We run multiple Node.js processes</h2>
+    <p><img src="/images/workers.png" alt=""/></p>
+</section>
+
+<section>
+    <h2>Now we have a new problem!</h2>
+    <p><img src="/images/scattered-sockets.png" alt=""/></p>
+</section>
+
+<section>
+    <h2>Possible solutions:</h2>
+    <ul>
+        <li>Poll the database</li>
+        <li>Pool all sockets to one server</li>
+        <li>Use a message queue</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Redis pub/sub</h2>
+    <ul>
+        <li>Redis is a key/value data store</li>
+        <li>You may already be using it for your sessions</li>
+        <li>Similar to memcached</li>
+        <li>But it now has pub/sub support!</li>
+        <li>It works a lot like websockets</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Here's how to use it</h2>
+    <pre><code>
+var client = redis.createClient();
+var client2 = redis.createClient();
+
+client.publish('instances', 'start');
+client2.on('message', function (channel, message) {
+    doStuff();
+});
+
+client2.subscribe('instances');
+client2.subscribe('chat');
+    </code></pre>
+</section>
+
+<section>
+    <h1>Questions?</h1>
+</section>
+
 <section style="text-align: left;">
-    <h1>THE END</h1>
-    <p>
-        - <a href="http://slides.com">Try the online editor</a> <br>
-        - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-    </p>
+    <h1>Thank You</h1>
+    <ul>
+        <li><a href="https://twitter.com/newz2000">@newz2000</a></li>
+        <li><a href="https://github.com/newz2000">Code on GitHub</a></li>
+        <li><a href="https://www.tekrs.com/">TEKRS</a>, affordable tech training</li>
+    </ul>
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="//tekrs.us9.list-manage.com/subscribe/post?u=72749da458b6f00a862c1b90c&amp;id=6c534e201a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+                <p>Subscribe to the low-volume mailing list for training discounts and opportunities:<br />
+                    <div class="mc-field-group">
+                        <input type="email" value="" name="EMAIL" class="required email" style="font-size:larger" id="mce-EMAIL" placeholder="email"> <input type="submit" value="Subscribe"  style="font-size:larger" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_72749da458b6f00a862c1b90c_6c534e201a" tabindex="-1" value=""></div>
+                    <div class="clear"></div>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!--End mc_embed_signup-->
 </section>
