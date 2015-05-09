@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "mocha -u tdd",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -15,5 +16,13 @@
     "node-compass": "0.2.3",
     "serve-favicon": "~2.2.0",
     "socket.io": "^1.3.5"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "istanbul": "^0.3.5",
+    "mocha": "^2.0.1",
+    "mockery": "^1.4.0",
+    "sinon": "^1.12.1",
+    "sinon-chai": "^2.6.0"
   }
 }

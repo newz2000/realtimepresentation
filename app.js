@@ -7,6 +7,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var socketio = require('socket.io');
+var iohelper = require('./io');
 
 var routes = require('./routes/index');
 
@@ -59,41 +60,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-var connection_count = 0;
-var questions = [];
-var current_slide;
-
-io.on('connection', function(socket) {
-  connection_count++;
-
-  io.emit('connections', connection_count);
-  socket.emit('questions', questions);
-  socket.emit('goto', current_slide);
-
-  socket.on('disconnect', function() {
-    connection_count--;
-    io.emit('connections', connection_count);
-  });
-
-  socket.on('goto', function(data) {
-    current_slide = data;
-    io.emit('goto', data);
-  });
-
-  socket.on('question', function(data) {
-    questions.push({question: data, upvotes: 0});
-    io.emit('questions', questions);
-  });
-
-  socket.on('upvote', function(data) {
-    var questionId = Number(data);
-
-    if(questionId >= 0 && questionId < questions.length) {
-      questions[questionId].upvotes++;
-      io.emit('questions', questions);
-    }
-  });
-
-});
+iohelper.init(io);
+io.on('connection', iohelper.connectionHandler);
 
 server.listen(5000);
